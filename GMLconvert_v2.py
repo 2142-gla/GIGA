@@ -19,23 +19,23 @@ except:
 
 ''' Variables '''
 gene_id = 0
+func_id = ""
 gene_dict = {}
-funct_dict = {}
-gene_list = ["", ""]
+func_dict = {}
+gene_meta = ["", ""]
+
 genes_ls = ['gene list']
 
 
 ''' Work through the file '''
+# Start time 
 start = time()
+
 for line in oldFile:
 	# print (line);
-
 	# set up fucntional class dictionary
 
-
-
 	# Make list of all the genes 
-	# Start time 
 
 	if line.startswith("total"): # end of data line
 		break
@@ -44,40 +44,41 @@ for line in oldFile:
 		# get id, name and GO
 		components = line.split("\t")
 
-		gene_list[0] = components[1].rstrip()
-		gene_list[1] = components[2].rstrip()
+		gene_meta[0] = components[1].rstrip()
+		gene_meta[1] = components[2].rstrip()
 
-		if gene_list[0] not in genes_ls:
-			genes_ls.append(gene_list[0])
-			graph_dict[gene_id] = gene_list
+		if gene_meta[0] not in genes_ls:
+			genes_ls.append(gene_meta[0])
+			gene_dict[gene_id] = gene_meta
 			gene_id = gene_id + 1
-			gene_list = ["", ""]
+			gene_meta = ["", ""]
 		else:
+			index = genes_ls.gene_meta[0]
+			gene_dict[gene_id] = gene_meta
+			gene_meta = ["", ""]
+
+		func_dict[func_id][2] = gene_dict
 
 	else:
 		components = line.split("\t")
-		func_list = [components[1].rstrip(), components[2].rstrip()]
-		funct_dict[components[0].rstrip()] = func_list
+		gene_dict = {}
+		func_list = [components[1].rstrip(), components[2].rstrip(), gene_dict]
+		func_dict[components[0].rstrip()] = func_list
+		func_id = components[0].rstrip()
+
 
 end = time()
 
 total_time = end - start
 print ("Total time to load and check gene list and create fucntional class list is: " + str(total_time))
 
-for key in funct_dict:
+for key in func_dict:
 	print (key)
-
+	for gene in func_dict[key][2]:
+		print ('\t', func_dict[key][2][gene][0], gene)
 
 
 
 ''' Close the files'''
 oldFile.close()
 newFile.close()
-
-
-
-
-
-
-
-
