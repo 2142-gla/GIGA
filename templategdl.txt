@@ -1,0 +1,391 @@
+graph: {
+layout_algorithm: forcedir
+
+infoname1: "locus name" infoname2: "rank" infoname3: "expression value"
+display_edge_labels: yes
+edge.arrowstyle: none
+node.fontname: "helvR12"
+node: {title: "VIRTUAL CENTER" label: "" scaling: 0.0 focus}colorentry 42: 230 230 230
+colorentry 43: 240 240 210
+colorentry 44: 255 0 0
+colorentry 45: 255 70 70
+colorentry 46: 255 140 140
+colorentry 47: 255 210 210
+colorentry 48: 0 255 0
+colorentry 49: 70 255 70
+colorentry 50: 140 255 140
+colorentry 51: 210 255 210
+edge: {source: "VIRTUAL CENTER" target:"SUBGRAPH YER065C" label: "" linestyle: invisible}
+graph: {title: "SUBGRAPH YER065C" status: folded color: 42 label: "17 genes\nisocitrate\nlyase et al.\np=1.04e-024"
+node: {title: "YAL054C" label: "acetyl\nCoA\nsynthetase" color: 44 info1: "YAL054C"info2: "4" info3: "-1.07"}
+edge: {source:"YBL015W" target: "CoA"}
+edge: {source:"YBL015W" target: "acetate"}
+edge: {source:"YCR005C" target: "CoA"}
+edge: {source:"YEL012W" target: "AMP"}
+edge: {source:"YEL012W" target: "diphosphate"}
+edge: {source:"YML042W" target: "CoA"}
+edge: {source:"YNL117W" target: "CoA"}
+edge: {source:"YNR001C" target: "CoA"}
+node: {title: "YBL015W" label: "acetyl\nCoA\nhydrolase" color: 44 info1: "YBL015W"info2: "5" info3: "-0.049"}
+edge: {source:"YAL054C" target: "CoA"}
+edge: {source:"YAL054C" target: "acetate"}
+edge: {source:"YCR005C" target: "Acetyl-CoA"}
+edge: {source:"YML042W" target: "Acetyl-CoA"}
+edge: {source:"YNL117W" target: "Acetyl-CoA"}
+edge: {source:"YNR001C" target: "Acetyl-CoA"}
+node: {title: "YCR005C" label: "citrate\nsynthase" color: 45 info1: "YCR005C"info2: "31" info3: "-0.514"}
+edge: {source:"YBL015W" target: "Acetyl-CoA"}
+edge: {source:"YKL085W" target: "oxaloacetate"}
+edge: {source:"YKR097W" target: "oxaloacetate"}
+edge: {source:"YNR001C" target: "citrate"}
+edge: {source:"YNR001C" target: "oxaloacetate"}
+node: {title: "YDL215C" label: "NAD-dependent\nglutamate\ndehydrogenase" color: 45 info1: "YDL215C"info2: "36" info3: "-0.136"}
+edge: {source:"YIL125W" target: "2-oxoglutarate"}
+edge: {source:"YKL085W" target: "NAD(+)"}
+edge: {source:"YKL085W" target: "NADH"}
+edge: {source:"YLR174W" target: "2-oxoglutarate"}
+edge: {source:"YMR250W" target: "L-glutamate"}
+edge: {source:"YNL009W" target: "2-oxoglutarate"}
+edge: {source:"YOR374W" target: "NAD(+)"}
+edge: {source:"YOR374W" target: "NADH"}
+node: {title: "YEL012W" label: "ubiquitin-conjugating\nenzyme|ubiquitin-protein\nligase" color: 45 info1: "YEL012W"info2: "28" info3: "-0.176"}
+edge: {source:"YAL054C" target: "AMP"}
+edge: {source:"YAL054C" target: "diphosphate"}
+node: {title: "YER065C" label: "isocitrate\nlyase" color: 44 info1: "YER065C"info2: "1" info3: "-0.01"}
+edge: {source:"YLR174W" target: "Isocitrate"}
+edge: {source:"YNL009W" target: "Isocitrate"}
+edge: {source:"YNL117W" target: "glyoxylate"}
+node: {title: "YIL125W" label: "alpha-ketoglutarate\ndehydrogenase" color: 45 info1: "YIL125W"info2: "10" info3: "0.284"}
+edge: {source:"YDL215C" target: "2-oxoglutarate"}
+edge: {source:"YKR097W" target: "CO(2)"}
+edge: {source:"YLR174W" target: "CO(2)"}
+edge: {source:"YMR250W" target: "CO(2)"}
+edge: {source:"YNL009W" target: "CO(2)"}
+node: {title: "YKL085W" label: "malate\ndehydrogenase" color: 45 info1: "YKL085W"info2: "19" info3: "0.102"}
+edge: {source:"YCR005C" target: "oxaloacetate"}
+edge: {source:"YDL215C" target: "NAD(+)"}
+edge: {source:"YDL215C" target: "NADH"}
+node: {title: "YKR097W" label: "phosphoenolpyruvate\ncarboxylkinase" color: 44 info1: "YKR097W"info2: "2" info3: "-0.124"}
+edge: {source:"YIL125W" target: "CO(2)"}
+node: {title: "YLR174W" label: "NADP-dependent\nisocitrate\ndehydrogenase" color: 44 info1: "YLR174W"info2: "6" info3: "-0.092"}
+edge: {source:"YER065C" target: "Isocitrate"}
+edge: {source:"YNL009W" target: "NADP(+)"}
+edge: {source:"YNL009W" target: "NADPH"}
+node: {title: "YML042W" label: "carnitine\nO-acetyltransferase" color: 45 info1: "YML042W"info2: "37" info3: "-0.592"}
+node: {title: "YMR170C" label: "aldeyhde\ndehydrogenase" color: 45 info1: "YMR170C"info2: "33" info3: "0.207"}
+edge: {source:"YOR374W" target: "An aldehyde"}
+edge: {source:"YOR374W" target: "an acid"}
+node: {title: "YMR250W" label: "glutamate\ndecarboxylase" color: 45 info1: "YMR250W"info2: "9" info3: "-0.024"}
+edge: {source:"YDL215C" target: "L-glutamate"}
+node: {title: "YNL009W" label: "NADP-dependent\nisocitrate\ndehydrogenase" color: 45 info1: "YNL009W"info2: "35" info3: "0.005"}
+edge: {source:"YLR174W" target: "NADP(+)"}
+edge: {source:"YLR174W" target: "NADPH"}
+node: {title: "YNL117W" label: "carbon-catabolite\nsensitive\nmalate\nsynthase" color: 44 info1: "YNL117W"info2: "7" info3: "-0.227"}
+edge: {source:"YER065C" target: "glyoxylate"}
+node: {title: "YNR001C" label: "citrate\nsynthase" color: 45 info1: "YNR001C"info2: "8" info3: "0.253"}
+edge: {source:"YCR005C" target: "citrate"}
+node: {title: "YOR374W" label: "aldehyde\ndehydrogenase" color: 45 info1: "YOR374W"info2: "27" info3: "0.07"}
+edge: {source:"YMR170C" target: "An aldehyde"}
+edge: {source:"YMR170C" target: "an acid"}
+node: {title: "oxaloacetate" scaling: 0.5}
+node: {title: "Acetyl-CoA" scaling: 0.5}
+node: {title: "Isocitrate" scaling: 0.5}
+node: {title: "acetate" scaling: 0.5}
+node: {title: "NADPH" scaling: 0.5}
+node: {title: "2-oxoglutarate" scaling: 0.5}
+node: {title: "NAD(+)" scaling: 0.5}
+node: {title: "CoA" scaling: 0.5}
+node: {title: "an acid" scaling: 0.5}
+node: {title: "glyoxylate" scaling: 0.5}
+node: {title: "AMP" scaling: 0.5}
+node: {title: "NADH" scaling: 0.5}
+node: {title: "diphosphate" scaling: 0.5}
+node: {title: "CO(2)" scaling: 0.5}
+node: {title: "L-glutamate" scaling: 0.5}
+node: {title: "An aldehyde" scaling: 0.5}
+node: {title: "citrate" scaling: 0.5}
+node: {title: "NADP(+)" scaling: 0.5}
+}
+edge: {source: "VIRTUAL CENTER" target:"SUBGRAPH YGR088W" label: "" linestyle: invisible}
+graph: {title: "SUBGRAPH YGR088W" status: folded color: 43 label: "11 genes\ncatalase\nT et al.\np=3.09e-010"
+node: {title: "YDL067C" label: "cytochrome\nc\noxidase\nsubunit\nVIIa" color: 47 info1: "YDL067C"info2: "96" info3: "-0.156"}
+edge: {source:"YDR256C" target: "2 H(2)O"}
+edge: {source:"YDR256C" target: "O(2)"}
+edge: {source:"YGL187C" target: "2 H(2)O"}
+edge: {source:"YGL187C" target: "4 ferricytochrome c"}
+edge: {source:"YGL187C" target: "4 ferrocytochrome c"}
+edge: {source:"YGL187C" target: "O(2)"}
+edge: {source:"YGL191W" target: "2 H(2)O"}
+edge: {source:"YGL191W" target: "4 ferricytochrome c"}
+edge: {source:"YGL191W" target: "4 ferrocytochrome c"}
+edge: {source:"YGL191W" target: "O(2)"}
+edge: {source:"YGR088W" target: "2 H(2)O"}
+edge: {source:"YGR088W" target: "O(2)"}
+edge: {source:"YHR051W" target: "2 H(2)O"}
+edge: {source:"YHR051W" target: "4 ferricytochrome c"}
+edge: {source:"YHR051W" target: "4 ferrocytochrome c"}
+edge: {source:"YHR051W" target: "O(2)"}
+edge: {source:"YIL111W" target: "2 H(2)O"}
+edge: {source:"YIL111W" target: "4 ferricytochrome c"}
+edge: {source:"YIL111W" target: "4 ferrocytochrome c"}
+edge: {source:"YIL111W" target: "O(2)"}
+edge: {source:"YKL026C" target: "2 H(2)O"}
+edge: {source:"YLR038C" target: "2 H(2)O"}
+edge: {source:"YLR038C" target: "4 ferricytochrome c"}
+edge: {source:"YLR038C" target: "4 ferrocytochrome c"}
+edge: {source:"YLR038C" target: "O(2)"}
+edge: {source:"YLR395C" target: "2 H(2)O"}
+edge: {source:"YLR395C" target: "4 ferricytochrome c"}
+edge: {source:"YLR395C" target: "4 ferrocytochrome c"}
+edge: {source:"YLR395C" target: "O(2)"}
+edge: {source:"YNL052W" target: "2 H(2)O"}
+edge: {source:"YNL052W" target: "4 ferricytochrome c"}
+edge: {source:"YNL052W" target: "4 ferrocytochrome c"}
+edge: {source:"YNL052W" target: "O(2)"}
+node: {title: "YDR256C" label: "catalase\nA" color: 47 info1: "YDR256C"info2: "106" info3: "-0.774"}
+edge: {source:"YDL067C" target: "2 H(2)O"}
+edge: {source:"YDL067C" target: "O(2)"}
+edge: {source:"YGR088W" target: "2 H(2)O(2)"}
+node: {title: "YGL187C" label: "cytochrome\nc\noxidase\nsubunit\nIV" color: 46 info1: "YGL187C"info2: "38" info3: "0.202"}
+edge: {source:"YDL067C" target: "4 ferricytochrome c"}
+edge: {source:"YDL067C" target: "4 ferrocytochrome c"}
+node: {title: "YGL191W" label: "cytochrome\nc\noxidase\nsubunit\nVIa|may..." color: 45 info1: "YGL191W"info2: "30" info3: "0.104"}
+node: {title: "YGR088W" label: "catalase\nT" color: 45 info1: "YGR088W"info2: "12" info3: "0.218"}
+edge: {source:"YDR256C" target: "2 H(2)O(2)"}
+node: {title: "YHR051W" label: "cytochrome\nc\noxidase\nsubunit" color: 45 info1: "YHR051W"info2: "23" info3: "0.274"}
+node: {title: "YIL111W" label: "cytochrome\nc\noxidase\nchain\nVb" color: 47 info1: "YIL111W"info2: "99" info3: "-0.02"}
+node: {title: "YKL026C" label: "Glutathione\nperoxidase\nparalogue" color: 45 info1: "YKL026C"info2: "14" info3: "-0.131"}
+node: {title: "YLR038C" label: "cytochrome\nc\noxidase\nsubunit\nVIb" color: 46 info1: "YLR038C"info2: "71" info3: "0.065"}
+node: {title: "YLR395C" label: "cytochrome\nc\noxidase\nchain\nVIII" color: 46 info1: "YLR395C"info2: "55" info3: "0.133"}
+node: {title: "YNL052W" label: "cytochrome\nc\noxidase\nchain\nVa" color: 45 info1: "YNL052W"info2: "34" info3: "-0.19"}
+node: {title: "O(2)" scaling: 0.5}
+node: {title: "2 H(2)O" scaling: 0.5}
+node: {title: "4 ferrocytochrome c" scaling: 0.5}
+node: {title: "2 H(2)O(2)" scaling: 0.5}
+node: {title: "4 ferricytochrome c" scaling: 0.5}
+}
+edge: {source: "VIRTUAL CENTER" target:"SUBGRAPH YML054C" label: "" linestyle: invisible}
+graph: {title: "SUBGRAPH YML054C" status: folded color: 42 label: "5 genes\nL-lactate\ncytochrome\nc\noxidoreductase|cytochrome\nb2 et al.\np=5.79e-007"
+node: {title: "YBL045C" label: "coenzyme\nQH2\ncytochrome\nc\nreductase..." color: 45 info1: "YBL045C"info2: "24" info3: "0.09"}
+edge: {source:"YDR529C" target: "2 ferricytochrome c"}
+edge: {source:"YDR529C" target: "2 ferrocytochrome c"}
+edge: {source:"YDR529C" target: "Q"}
+edge: {source:"YDR529C" target: "QH(2)"}
+edge: {source:"YEL024W" target: "2 ferricytochrome c"}
+edge: {source:"YEL024W" target: "2 ferrocytochrome c"}
+edge: {source:"YEL024W" target: "Q"}
+edge: {source:"YEL024W" target: "QH(2)"}
+edge: {source:"YFR033C" target: "2 ferricytochrome c"}
+edge: {source:"YFR033C" target: "2 ferrocytochrome c"}
+edge: {source:"YFR033C" target: "Q"}
+edge: {source:"YFR033C" target: "QH(2)"}
+edge: {source:"YML054C" target: "2 ferricytochrome c"}
+edge: {source:"YML054C" target: "2 ferrocytochrome c"}
+node: {title: "YDR529C" label: "ubiquinol\ncytochrome\nC\noxidoreductase\nsubunit..." color: 45 info1: "YDR529C"info2: "21" info3: "0.21"}
+edge: {source:"YBL045C" target: "2 ferricytochrome c"}
+edge: {source:"YBL045C" target: "2 ferrocytochrome c"}
+edge: {source:"YBL045C" target: "Q"}
+edge: {source:"YBL045C" target: "QH(2)"}
+node: {title: "YEL024W" label: "Rieske\niron-sulfur\nprotein\nof\nthe..." color: 45 info1: "YEL024W"info2: "32" info3: "0.175"}
+node: {title: "YFR033C" label: "ubiquinol\ncytochrome\nC\noxidoreductase\nsubunit..." color: 46 info1: "YFR033C"info2: "44" info3: "0.132"}
+node: {title: "YML054C" label: "L-lactate\ncytochrome\nc\noxidoreductase|cytochrome\nb2" color: 45 info1: "YML054C"info2: "11" info3: "-0.49"}
+node: {title: "QH(2)" scaling: 0.5}
+node: {title: "2 ferrocytochrome c" scaling: 0.5}
+node: {title: "Q" scaling: 0.5}
+node: {title: "2 ferricytochrome c" scaling: 0.5}
+}
+edge: {source: "VIRTUAL CENTER" target:"SUBGRAPH YLR377C" label: "" linestyle: invisible}
+graph: {title: "SUBGRAPH YLR377C" status: folded color: 43 label: "3 genes\nfructose-1,6-bisphosphatase et al.\np=3.80e-005"
+node: {title: "YBR117C" label: "transketolase,\nsimilar\nto\nTKL1" color: 45 info1: "YBR117C"info2: "26" info3: "0.453"}
+edge: {source:"YGR043C" target: "D-glyceraldehyde 3-phosphate"}
+edge: {source:"YGR043C" target: "Sedoheptulose 7-phosphate"}
+node: {title: "YGR043C" label: "Hypothetical\nORF" color: 45 info1: "YGR043C"info2: "15" info3: "-0.4"}
+edge: {source:"YBR117C" target: "D-glyceraldehyde 3-phosphate"}
+edge: {source:"YBR117C" target: "Sedoheptulose 7-phosphate"}
+edge: {source:"YLR377C" target: "D-fructose 6-phosphate"}
+node: {title: "YLR377C" label: "fructose-1,6-bisphosphatase" color: 44 info1: "YLR377C"info2: "3" info3: "-0.247"}
+edge: {source:"YGR043C" target: "D-fructose 6-phosphate"}
+node: {title: "Sedoheptulose 7-phosphate" scaling: 0.5}
+node: {title: "D-glyceraldehyde 3-phosphate" scaling: 0.5}
+node: {title: "D-fructose 6-phosphate" scaling: 0.5}
+}
+edge: {source: "VIRTUAL CENTER" target:"SUBGRAPH YJL045W" label: "" linestyle: invisible}
+graph: {title: "SUBGRAPH YJL045W" status: folded color: 42 label: "3 genes\nSimilar\nto\nSDH1 et al.\np=1.56e-004"
+node: {title: "YJL045W" label: "Similar\nto\nSDH1" color: 45 info1: "YJL045W"info2: "20" info3: "-0.357"}
+edge: {source:"YKL148C" target: "Succinate"}
+edge: {source:"YKL148C" target: "fumarate"}
+edge: {source:"YKL148C" target: "ubiquinol"}
+edge: {source:"YKL148C" target: "ubiquinone"}
+edge: {source:"YLL041C" target: "Succinate"}
+edge: {source:"YLL041C" target: "fumarate"}
+edge: {source:"YLL041C" target: "ubiquinol"}
+edge: {source:"YLL041C" target: "ubiquinone"}
+node: {title: "YKL148C" label: "succinate\ndehydrogenase\nflavoprotein\nsubunit" color: 46 info1: "YKL148C"info2: "41" info3: "0.006"}
+edge: {source:"YJL045W" target: "Succinate"}
+edge: {source:"YJL045W" target: "fumarate"}
+edge: {source:"YJL045W" target: "ubiquinol"}
+edge: {source:"YJL045W" target: "ubiquinone"}
+node: {title: "YLL041C" label: "succinate\ndehydrogenase\n(ubiquinone)\niron-sulfur\nprotein..." color: 45 info1: "YLL041C"info2: "22" info3: "0.014"}
+node: {title: "fumarate" scaling: 0.5}
+node: {title: "Succinate" scaling: 0.5}
+node: {title: "ubiquinol" scaling: 0.5}
+node: {title: "ubiquinone" scaling: 0.5}
+}
+edge: {source: "VIRTUAL CENTER" target:"SUBGRAPH YFR015C" label: "" linestyle: invisible}
+graph: {title: "SUBGRAPH YFR015C" status: folded color: 43 label: "3 genes\nglycogen\nsynthase\n(UDP-glucose-starch\nglucosyltransferase) et al.\np=2.08e-004"
+node: {title: "YFR015C" label: "glycogen\nsynthase\n(UDP-glucose-starch\nglucosyltransferase)" color: 45 info1: "YFR015C"info2: "13" info3: "-0.595"}
+edge: {source:"YLR258W" target: "UDP"}
+edge: {source:"YLR258W" target: "UDP-glucose"}
+edge: {source:"YLR258W" target: "{(1,4)-alpha-D-glucosyl}(N)"}
+edge: {source:"YLR258W" target: "{(1,4)-alpha-D-glucosyl}(N+1)"}
+edge: {source:"YML100W" target: "UDP"}
+edge: {source:"YML100W" target: "UDP-glucose"}
+node: {title: "YLR258W" label: "glycogen\nsynthase\n(UDP-glucose-starch\nglucosyltransferase)" color: 45 info1: "YLR258W"info2: "18" info3: "0.133"}
+edge: {source:"YFR015C" target: "UDP"}
+edge: {source:"YFR015C" target: "UDP-glucose"}
+edge: {source:"YFR015C" target: "{(1,4)-alpha-D-glucosyl}(N)"}
+edge: {source:"YFR015C" target: "{(1,4)-alpha-D-glucosyl}(N+1)"}
+node: {title: "YML100W" label: "similar\nto\nTPS3\ngene\nproduct|trehalose-6-phosphate..." color: 46 info1: "YML100W"info2: "45" info3: "0.366"}
+node: {title: "UDP-glucose" scaling: 0.5}
+node: {title: "{(1,4)-alpha-D-glucosyl}(N)" scaling: 0.5}
+node: {title: "UDP" scaling: 0.5}
+node: {title: "{(1,4)-alpha-D-glucosyl}(N+1)" scaling: 0.5}
+}
+edge: {source: "VIRTUAL CENTER" target:"SUBGRAPH YJR073C" label: "" linestyle: invisible}
+graph: {title: "SUBGRAPH YJR073C" status: folded color: 42 label: "5 genes\nunsaturated\nphospholipid\nN-methyltransferase et al.\np=3.85e-004"
+node: {title: "YDL033C" label: "Hypothetical\nORF" color: 47 info1: "YDL033C"info2: "131" info3: "-0.02"}
+edge: {source:"YGL192W" target: "S-adenosyl-L-homocysteine"}
+edge: {source:"YGL192W" target: "S-adenosyl-L-methionine"}
+edge: {source:"YJR073C" target: "S-adenosyl-L-homocysteine"}
+edge: {source:"YJR073C" target: "S-adenosyl-L-methionine"}
+edge: {source:"YML110C" target: "S-adenosyl-L-homocysteine"}
+edge: {source:"YML110C" target: "S-adenosyl-L-methionine"}
+edge: {source:"YOL096C" target: "S-adenosyl-L-homocysteine"}
+edge: {source:"YOL096C" target: "S-adenosyl-L-methionine"}
+node: {title: "YGL192W" label: "methyltransferase" color: 47 info1: "YGL192W"info2: "89" info3: "-0.024"}
+edge: {source:"YDL033C" target: "S-adenosyl-L-homocysteine"}
+edge: {source:"YDL033C" target: "S-adenosyl-L-methionine"}
+node: {title: "YJR073C" label: "unsaturated\nphospholipid\nN-methyltransferase" color: 46 info1: "YJR073C"info2: "53" info3: "-0.063"}
+node: {title: "YML110C" label: "C-methyltransferase\n(putative)" color: 46 info1: "YML110C"info2: "156" info3: "0.017"}
+node: {title: "YOL096C" label: "3,4-dihydroxy-5-hexaprenylbenzoate\nmethyltransferase" color: 46 info1: "YOL096C"info2: "151" info3: "-0.312"}
+node: {title: "S-adenosyl-L-methionine" scaling: 0.5}
+node: {title: "S-adenosyl-L-homocysteine" scaling: 0.5}
+}
+edge: {source: "VIRTUAL CENTER" target:"SUBGRAPH YDR001C" label: "" linestyle: invisible}
+graph: {title: "SUBGRAPH YDR001C" status: folded color: 43 label: "3 genes\nneutral\ntrehalase et al.\np=5.01e-004"
+node: {title: "YBR001C" label: "neutral\ntrehalase" color: 46 info1: "YBR001C"info2: "58" info3: "0.129"}
+edge: {source:"YDR001C" target: "2 D-glucose"}
+edge: {source:"YDR001C" target: "Alpha,alpha-trehalose"}
+edge: {source:"YPR026W" target: "2 D-glucose"}
+edge: {source:"YPR026W" target: "Alpha,alpha-trehalose"}
+node: {title: "YDR001C" label: "neutral\ntrehalase" color: 46 info1: "YDR001C"info2: "49" info3: "0.233"}
+edge: {source:"YBR001C" target: "2 D-glucose"}
+edge: {source:"YBR001C" target: "Alpha,alpha-trehalose"}
+node: {title: "YPR026W" label: "acid\ntrehalase" color: 46 info1: "YPR026W"info2: "60" info3: "-0.005"}
+node: {title: "Alpha,alpha-trehalose" scaling: 0.5}
+node: {title: "2 D-glucose" scaling: 0.5}
+}
+edge: {source: "VIRTUAL CENTER" target:"SUBGRAPH YCR014C" label: "" linestyle: invisible}
+graph: {title: "SUBGRAPH YCR014C" status: folded color: 42 label: "17 genes\nDNA\npolymerase\nIV et al.\np=5.44e-004"
+node: {title: "YBR278W" label: "DNA\npolymerase\nII\nC\nand..." color: 46 info1: "YBR278W"info2: "220" info3: "-0.194"}
+edge: {source:"YCL031C" target: "N diphosphate"}
+edge: {source:"YCR014C" target: "N deoxynucleoside triphosphate"}
+edge: {source:"YCR014C" target: "N diphosphate"}
+edge: {source:"YCR014C" target: "{DNA}(N)"}
+edge: {source:"YDL102W" target: "N deoxynucleoside triphosphate"}
+edge: {source:"YDL102W" target: "N diphosphate"}
+edge: {source:"YDL102W" target: "{DNA}(N)"}
+edge: {source:"YDR045C" target: "N diphosphate"}
+edge: {source:"YFL036W" target: "N diphosphate"}
+edge: {source:"YJL140W" target: "N diphosphate"}
+edge: {source:"YJR006W" target: "N deoxynucleoside triphosphate"}
+edge: {source:"YJR006W" target: "N diphosphate"}
+edge: {source:"YJR006W" target: "{DNA}(N)"}
+edge: {source:"YKL144C" target: "N diphosphate"}
+edge: {source:"YKR002W" target: "N diphosphate"}
+edge: {source:"YNL151C" target: "N diphosphate"}
+edge: {source:"YNL262W" target: "N deoxynucleoside triphosphate"}
+edge: {source:"YNL262W" target: "N diphosphate"}
+edge: {source:"YNL262W" target: "{DNA}(N)"}
+edge: {source:"YOL005C" target: "N diphosphate"}
+edge: {source:"YOR151C" target: "N diphosphate"}
+edge: {source:"YOR210W" target: "N diphosphate"}
+edge: {source:"YPL167C" target: "N deoxynucleoside triphosphate"}
+edge: {source:"YPL167C" target: "N diphosphate"}
+edge: {source:"YPL167C" target: "{DNA}(N)"}
+edge: {source:"YPR010C" target: "N diphosphate"}
+node: {title: "YCL031C" label: "involved\nin\nrRNA\nprocessing" color: 46 info1: "YCL031C"info2: "412" info3: "0.125"}
+edge: {source:"YBR278W" target: "N diphosphate"}
+edge: {source:"YDR045C" target: "N nucleoside triphosphate"}
+edge: {source:"YDR045C" target: "{RNA}(N)"}
+edge: {source:"YFL036W" target: "N nucleoside triphosphate"}
+edge: {source:"YFL036W" target: "{RNA}(N)"}
+edge: {source:"YJL140W" target: "N nucleoside triphosphate"}
+edge: {source:"YJL140W" target: "{RNA}(N)"}
+edge: {source:"YKL144C" target: "N nucleoside triphosphate"}
+edge: {source:"YKL144C" target: "{RNA}(N)"}
+edge: {source:"YNL151C" target: "N nucleoside triphosphate"}
+edge: {source:"YNL151C" target: "{RNA}(N)"}
+edge: {source:"YOL005C" target: "N nucleoside triphosphate"}
+edge: {source:"YOL005C" target: "{RNA}(N)"}
+edge: {source:"YOR151C" target: "N nucleoside triphosphate"}
+edge: {source:"YOR151C" target: "{RNA}(N)"}
+edge: {source:"YOR210W" target: "N nucleoside triphosphate"}
+edge: {source:"YOR210W" target: "{RNA}(N)"}
+edge: {source:"YPR010C" target: "N nucleoside triphosphate"}
+edge: {source:"YPR010C" target: "{RNA}(N)"}
+node: {title: "YCR014C" label: "DNA\npolymerase\nIV" color: 46 info1: "YCR014C"info2: "199" info3: "0.117"}
+edge: {source:"YBR278W" target: "N deoxynucleoside triphosphate"}
+edge: {source:"YBR278W" target: "{DNA}(N)"}
+node: {title: "YDL102W" label: "DNA\npolymerase\nIII\ncatalytic\n(delta)..." color: 46 info1: "YDL102W"info2: "471" info3: "0.002"}
+node: {title: "YDR045C" label: "TFIIS-like\nsmall\nPol\nIII\nsubunit..." color: 46 info1: "YDR045C"info2: "479" info3: "0.233"}
+edge: {source:"YCL031C" target: "N nucleoside triphosphate"}
+edge: {source:"YCL031C" target: "{RNA}(N)"}
+node: {title: "YFL036W" label: "mitochondrial\nRNA\npolymerase" color: 46 info1: "YFL036W"info2: "336" info3: "-0.164"}
+node: {title: "YJL140W" label: "RNA\npolymerase\nII\nfourth\nlargest..." color: 46 info1: "YJL140W"info2: "426" info3: "0.115"}
+node: {title: "YJR006W" label: "DNA\npolymerase\ndelta\n55\nkDa..." color: 46 info1: "YJR006W"info2: "295" info3: "-0.574"}
+node: {title: "YKL144C" label: "RNA\npolymerase\nIII\nsubunit" color: 46 info1: "YKL144C"info2: "441" info3: "-0.217"}
+node: {title: "YKR002W" label: "poly(A)\npolymerase" color: 46 info1: "YKR002W"info2: "287" info3: "1.083"}
+node: {title: "YNL151C" label: "HMG1-like\nprotein|RNA\npolymerase\nIII\n(C)..." color: 46 info1: "YNL151C"info2: "465" info3: "0.351"}
+node: {title: "YNL262W" label: "DNA\npolymerase\nII" color: 46 info1: "YNL262W"info2: "408" info3: "-0.025"}
+node: {title: "YOL005C" label: "RNA\npolymerase\nII\ncore\nsubunit" color: 46 info1: "YOL005C"info2: "394" info3: "0.004"}
+node: {title: "YOR151C" label: "second\nlargest\nsubunit\nof\nRNA..." color: 46 info1: "YOR151C"info2: "481" info3: "0.351"}
+node: {title: "YOR210W" label: "RNA\npolymerase\nII\ncore\nsubunit" color: 46 info1: "YOR210W"info2: "239" info3: "-0.037"}
+node: {title: "YPL167C" label: "DNA\npolymerase\nzeta\nsubunit" color: 46 info1: "YPL167C"info2: "305" info3: "-0.132"}
+node: {title: "YPR010C" label: "RNA\npolymerase\nI\nsubunit" color: 46 info1: "YPR010C"info2: "335" info3: "-0.134"}
+node: {title: "N nucleoside triphosphate" scaling: 0.5}
+node: {title: "N deoxynucleoside triphosphate" scaling: 0.5}
+node: {title: "N diphosphate" scaling: 0.5}
+node: {title: "{DNA}(N)" scaling: 0.5}
+node: {title: "{RNA}(N)" scaling: 0.5}
+}
+edge: {source: "VIRTUAL CENTER" target:"SUBGRAPH YIR038C" label: "" linestyle: invisible}
+graph: {title: "SUBGRAPH YIR038C" status: folded color: 43 label: "5 genes\nglutathione\ntransferase et al.\np=8.64e-004"
+node: {title: "YDR272W" label: "glyoxylase-II" color: 47 info1: "YDR272W"info2: "86" info3: "0.016"}
+edge: {source:"YIR038C" target: "glutathione"}
+edge: {source:"YLL060C" target: "glutathione"}
+edge: {source:"YML004C" target: "glutathione"}
+edge: {source:"YOR040W" target: "(S)-(2-hydroxyacyl)glutathione"}
+edge: {source:"YOR040W" target: "a 2-hydroxy acid anion"}
+edge: {source:"YOR040W" target: "glutathione"}
+node: {title: "YIR038C" label: "glutathione\ntransferase" color: 46 info1: "YIR038C"info2: "57" info3: "0.185"}
+edge: {source:"YDR272W" target: "glutathione"}
+edge: {source:"YLL060C" target: "HX"}
+edge: {source:"YLL060C" target: "R-S-glutathione"}
+edge: {source:"YLL060C" target: "RX"}
+node: {title: "YLL060C" label: "glutathione\ntransferase" color: 47 info1: "YLL060C"info2: "147" info3: "-0.123"}
+edge: {source:"YIR038C" target: "HX"}
+edge: {source:"YIR038C" target: "R-S-glutathione"}
+edge: {source:"YIR038C" target: "RX"}
+node: {title: "YML004C" label: "lactoylglutathione\nlyase\n(glyoxalase\nI)" color: 47 info1: "YML004C"info2: "103" info3: "0.229"}
+node: {title: "YOR040W" label: "glyoxylase-II" color: 47 info1: "YOR040W"info2: "183" info3: "-0.214"}
+edge: {source:"YDR272W" target: "(S)-(2-hydroxyacyl)glutathione"}
+edge: {source:"YDR272W" target: "a 2-hydroxy acid anion"}
+node: {title: "glutathione" scaling: 0.5}
+node: {title: "RX" scaling: 0.5}
+node: {title: "(S)-(2-hydroxyacyl)glutathione" scaling: 0.5}
+node: {title: "HX" scaling: 0.5}
+node: {title: "a 2-hydroxy acid anion" scaling: 0.5}
+node: {title: "R-S-glutathione" scaling: 0.5}
+}
+}
