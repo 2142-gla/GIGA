@@ -111,7 +111,7 @@ key = "YDR001C"
 
 
 # Make a new file
-newFile = open("output_2.gml", 'w')
+newFile = open("output_3.gml", 'w')
 
 
 
@@ -120,15 +120,15 @@ newFile = open("output_2.gml", 'w')
 print (topTxt)
 newFile.write(topTxt)
 
-#for key in funClasses:
-# Print nodes
-for geneTitle in funClasses[key][2]:
-    print (nodeCreate(nodeTxt, geneTitle, gene_dict))
-    newFile.write(nodeCreate(nodeTxt, geneTitle, gene_dict))
-# Print Edges
-for edge in funClasses[key][1]:
-    print(edgeCreate(edgeTxt, edge))
-    newFile.write(edgeCreate(edgeTxt, edge))
+for key in funClasses:
+    # Print nodes
+    for geneTitle in funClasses[key][2]:
+        print (nodeCreate(nodeTxt, geneTitle, gene_dict))
+        newFile.write(nodeCreate(nodeTxt, geneTitle, gene_dict))
+    # Print Edges
+    for edge in funClasses[key][1]:
+        print(edgeCreate(edgeTxt, edge))
+        newFile.write(edgeCreate(edgeTxt, edge))
 
 
 
