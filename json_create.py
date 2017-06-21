@@ -17,6 +17,7 @@ def nodeJSON(node, gene):
     meta = metaNode(gene, shape)
 
     # node: id, name, description, shape, background colour, transparency, meta information
+    #print ((node) % (idnum, name, description, shape, colour[0], colour[1], meta))
     return ((node) % (idnum, name, description, shape, colour[0], colour[1], meta))
 
 #   Check of the gene is a anchor gene
@@ -37,14 +38,19 @@ def getFC(gene):
     # Check if gene is in the geneList of each Functional Class
     for key in funClasses:
         # If gene found in gene list add the name of the functional class to the fcGroup
-        if any(gene in sublist for sublist in funClasses[key][2]):
+        if any(gene in genelist for genelist in funClasses[key][2]):
             fcGroup.append(key)
+        #     print(gene, "found")
+        # else:
+        #     print (gene,"not found")
+    #print ("getFC", fcGroup)
     return fcGroup
 
 #   Create the metadata for the tooltip. This will depend on wither the gene is a anchor or normal gene
 #   Input: gene and shape
 #   Output: string format for meta data
 def metaNode(gene, shape):
+    #print ('metaNode calls getFC')
     fcGroup = getFC(gene)
 
     # Need to calculate rank in fc
@@ -144,7 +150,7 @@ def edgeJSON(text, link):
 #   Output: file object
 def createJS():
     try:
-        jsFile = open("eviNetwork.cyjs", 'w')
+        jsFile = open("eviNetwork01.cyjs", 'w')
         return jsFile
     except:
         print ("Can't create file!")
@@ -191,27 +197,27 @@ def makeJSON(fcDiction, geDiction):
 
     # print the nodes
     for n, gene in enumerate(geneDiction):
-        if n == (len(geneDiction) - 1):
-            # last element
+        print (n, gene)
+        if n == len(geneDiction) - 1:
+            # last element®
             nodeTxt = nodeJSON(node, gene)
-            print(nodeText, comma, sel, end='')
-            jsFile.write(nodeText, comma, sel)
+            nodeTxt = nodeTxt + " " + comma + " " + sel
+
+            jsFile.write(nodeTxt)
         else:
             nodeTxt = nodeJSON(node, gene)
-            print(nodeTxt, comma, sel, end='')
-            jsFile.write(nodeTxt, comma, sel, end='')
-            #nodeJSON(node, gene)
-            print(comma, end='')
-            jsFile.write(comma, end='')
+            nodeTxt = nodeTxt + " " + comma + " " + sel
+            jsFile.write(nodeTxt)
+            jsFile.write(comma)
 
     # close the nodes
-    print(close + comma, end='')
-    jsFile.write(close + comma, end='')
+    #print(close + comma, end='')
+    jsFile.write(close + comma)
 
 
     # Start the edges
-    print(edgetop, end='')
-    jsFile.write(edgetop, end='')
+    #print(edgetop, end='')
+    jsFile.write(edgetop)
 
     # print edge section
     for o, item in enumerate(funClasses):
@@ -219,19 +225,20 @@ def makeJSON(fcDiction, geDiction):
         for m, link in enumerate(fcList):
             if o == (len(funClasses) - 1) and m == (len(fcList) -1):
                 # Last edge
-                print(edgeJSON(edge, link), comma, sel, end='')
-                jsFile.write(edgeJSON(edge, link), comma, sel, end='')
+                edgeTxt = edgeJSON(edge, link) + " " + comma + " " + sel
+                jsFile.write(edgeTxt)
             else:
-                print(edgeJSON(edge, link), comma, sel, end='')
-                jsFile.write(edgeJSON(edge, link), comma, sel, end='')
-                print(comma, end='')
-                jsFile.write(comma, end='')
+                #print(edgeJSON(edge, link), comma, sel, end='')
+                edgeTxt = edgeJSON(edge, link) + " " + comma + " " + sel
+                jsFile.write(edgeTxt)
+                #print(comma, end='')
+                jsFile.write(comma)
 
 
-    print(close, end='')
-    jsFile.write(close, end='')
+    #print(close, end='')
+    jsFile.write(close)
     # footer
-    print(end)
+    #print(end)
     jsFile.write(end)
 
     # close the json file
