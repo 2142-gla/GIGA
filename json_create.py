@@ -144,7 +144,7 @@ def edgeJSON(text, link):
 #   Output: file object
 def createJS():
     try:
-        jsFile = open("eviNetwork.cyjs", 'w')
+        jsFile = open("eviNetwork01.cyjs", 'w')
         return jsFile
     except:
         print ("Can't create file!")
