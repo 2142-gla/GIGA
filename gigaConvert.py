@@ -48,7 +48,7 @@ def checkDictionaries():
             anchorGene = funClasses[title][2][0]
             anchorTitle = anchorGene[0]
             funClasses[anchorTitle] = funClasses[title]
-            funClasses[anchorTitle][0][]
+            funClasses[anchorTitle][0][0]
             del dictionary[title]
 
 
@@ -112,17 +112,36 @@ def mainGiga():
                 numOf = 0
                 rFC += 1
             # get functional class name and  p value, number of genes
-            fcName = re.findall('^([A-Za-z0-9]*)\s.*', line)[0]
+            #fcName = re.findall('^([A-Za-z0-9]*)\s.*', line)[0]
             p = re.findall('.*\s([0-9e.-]+)\s[0-9]+', line)[0]
-            title = re.findall('^[A-Za-z0-9]*\s([\s\S]*)\s[0-9.e-]+\s.*', line)[0]
+            #title = re.findall('^[A-Za-z0-9]*\s([\s\S]*)\s[0-9.e-]+\s.*', line)[0]
             # Fix a quirk in the default text that some times splits the title into two
-            if '\t' in title:
-                title = re.findall('([A-Za-z0-9\s\S]*)\t.*', title)[0]
+            # if '\t' in title:
+            #     title = re.findall('([A-Za-z0-9\s\S]*)\t.*', title)[0]
             maxR = re.findall('.*\s([0-9]*)', line)[0]
-            # print (fcName,"-", p,"-", rFC, "-", title,"-", numOf)
+
             # create meta list
-            meta = [title, p, rFC, maxR]
+            #meta = [title, p, rFC, maxR]
         elif (line.startswith('-')):
+            if (line.startswith('-1-')):
+                fcName = re.findall('[-][0-9]+[-]\s([A-Z0-9]*)\s.*', line)[0]
+                title = fcName
+                r = re.findall('[-]([0-9]+)[-]\s.*', line)[0]
+                r = int(r)
+                if r > numOf:
+                    numOf = r
+
+                # add gene to geneDiction
+                if (title not in geneDiction):
+                    goName = re.findall('[-][0-9]+[-]\s[A-Z0-9]*\s(.*)\s[0-9]*\s[0-9]*', line)[0]
+                    rankAll = re.findall('[-][0-9]+[-]\s[A-Z0-9]*\s.*\s[0-9]*\s([0-9]*)', line)[0]
+                    geneDiction[title] = [geneID, goName, rankAll]
+                    geneID += 1
+                # add gene to geneList
+                rankFC = re.findall('[-][0-9]+[-]\s[A-Z0-9]*\s.*\s([0-9]*)\s[0-9]*', line)[0]
+                geneList.append([title, rankFC, r])
+                meta = [fcName, p, rFC, maxR]
+
             # geneDiction and geneList information
             if (line.startswith('-')):
                 title = re.findall('[-][0-9]+[-]\s([A-Z0-9]*)\s.*', line)[0]
@@ -154,7 +173,8 @@ def mainGiga():
     # id for the edges
     edgeID = geneID + 1
 
-    print ([anchor for anchor in funClasses])
+    anchors = ([anchor for anchor in funClasses])
+    fcNum = 0
 
     # work through gdlOut to get edges for each functional class
     # Information to make up the edges
@@ -170,12 +190,13 @@ def mainGiga():
                 for k in range(0, len(fcList), 1):
                     fcList[k].append(geneID)
                     geneID += 1
-                print(subgraph)
-                print(funClasses[subgraph])
+                # print(subgraph)
+                # print(funClasses[subgraph])
                 funClasses[subgraph].insert(1, fcList)
                 fcList = []
             # Get title and metadata about the subgraph
-            subgraph = re.findall(r'graph:.*"SUBGRAPH (\S*)"', line)[0]
+            subgraph = anchors[fcNum]
+            fcNum += 1
         # Get name of source gene
         elif re.match(r'node:.*title: "[^VIRTUAL].*label', line) is not None:
             geneTitle = re.findall(r'title: "([^"]*)"', line)[0]
