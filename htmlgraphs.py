@@ -7,6 +7,14 @@ Create an html description of the subgraphs
 import networkx as nx
 import matplotlib.pyplot as plt
 
+# Get a gene name from an id
+def getName(id, geneDiction):
+    for key in geneDiction:
+        if id in geneDiction[key]:
+            return key
+    return '-1'
+
+
 # Main function receives the two data dictionaries
 def main (funClasses, geneDiction):
     # Start
@@ -20,9 +28,9 @@ def main (funClasses, geneDiction):
     geneList = funClasses[key][2]
 
 
-    # Create nodes
+    # Create nodes and use titles rather than id
     for geneDetails in geneList:
-        nodeGene = geneDiction[geneDetails[0]][0]
+        nodeGene = geneDetails[0]
         print (nodeGene)
         fc01.add_node(nodeGene)
         # add labels to nodes
@@ -35,16 +43,17 @@ def main (funClasses, geneDiction):
     edgesList = funClasses[key][1]
 
     for edge in edgesList:
-        n1 = edge[0]
-        n2 = edge[1]
+        n1 = getName(edge[0], geneDiction)
+        n2 = getName(edge[1], geneDiction)
         fc01.add_edge(n1, n2)
 
     print (fc01.edges())
 
-    nx.draw(fc01)
+    nx.draw(fc01, with_labels = True)
 
     # http://networkx.readthedocs.io/en/networkx-1.11/reference/generated/networkx.drawing.nx_pylab.draw_networkx_labels.html#networkx.drawing.nx_pylab.draw_networkx_labels
-
+    # G = nx.path_graph(4)
+    # pos = nx.spring_layout(G)
 
     plt.show()
 
