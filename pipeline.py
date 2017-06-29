@@ -35,7 +35,7 @@ key.buildTxt(funClasses, geneDiction)
 
 # Create the JSON file
 
-json_create.makeJSON(funClasses, geneDiction)
+json_create.main(funClasses, geneDiction)
 
 # Convert output to gml
 # subprocess.call(['/Library/Frameworks/Python.framework/Versions/3.6/bin/python3', 'gigaConvert.py'])

@@ -15,7 +15,7 @@ def nodeJSON(node, gene):
     shape = shapeNode(gene)
     colour = colorNode(gene)
     rankAll = geneDiction[gene][2]
-    meta = geneDiction[gene][1]
+    meta = metaNode(gene, shape)
 
     # node: id, name, description, shape, background colour, transparency, meta information
     #print ((node) % (idnum, name, description, shape, colour[0], colour[1], meta))
@@ -47,39 +47,39 @@ def getFC(gene):
     #print ("getFC", fcGroup)
     return fcGroup
 
-# #   Create the metadata for the tooltip. This will depend on wither the gene is a anchor or normal gene
-# #   Input: gene and shape
-# #   Output: string format for meta data
-# def metaNode(gene, shape):
-#     #print ('metaNode calls getFC')
-#     fcGroup = getFC(gene)
-#
-#     # Need to calculate rank in fc
-#     genels = funClasses[fcGroup[0]][2]
-#     # Get the rank in functional class for the gene in the main functional class int(funClasses[fcGene][2])
-#     rank = int([i[1] for i in genels if i[0] == gene][0])
-#     m = 0
-#
-#     if shape == "Ellipse" and len(fcGroup) > 1:
-#         metaFor = ("%s Rank of Gene Overall: %s ") % (gene, geneDiction[gene][2])
-#         for fc in fcGroup:
-#             genels = funClasses[fcGroup[m]][2]
-#             # Get the rank in functional class for the gene in the main functional class int(funClasses[fcGene][2])
-#             rank = int([i[1] for i in genels if i[0] == gene][0])
-#             addMeta = " Rank in Functional Class %s: %s. " % (fc, funClasses[fc][2][1])
-#             metaFor = metaFor + addMeta
-#             m += 1
-#     elif shape == "Ellipse":
-#         metaFor = "%s Rank of Gene Overall: %s. Rank in Functional Class %s: %s"
-#         metaFor = metaFor % (geneDiction[gene][1], geneDiction[gene][2], fcGroup[0], rank)
-#     else:
-#         metaFor = "Subgraph Description: %s. P value: %s. Number of Genes in Class: %s. "
-#         metaFor = metaFor % (funClasses[fcGroup[0]][0][0], funClasses[fcGroup[0]][0][1], rank)
-#         anchor = "Anchor gene description %s Rank of Gene Overall: %s. Rank in Functional Class %s: %s."
-#         anchor = anchor % (geneDiction[gene][1], geneDiction[gene][2], fcGroup[0], rank)
-#         metaFor = metaFor + anchor
-#
-#     return metaFor
+#   Create the metadata for the tooltip. This will depend on wither the gene is a anchor or normal gene
+#   Input: gene and shape
+#   Output: string format for meta data
+def metaNode(gene, shape):
+    #print ('metaNode calls getFC')
+    fcGroup = getFC(gene)
+
+    # Need to calculate rank in fc
+    genels = funClasses[fcGroup[0]][2]
+    # Get the rank in functional class for the gene in the main functional class int(funClasses[fcGene][2])
+    rank = int([i[1] for i in genels if i[0] == gene][0])
+    m = 0
+
+    if shape == "Ellipse" and len(fcGroup) > 1:
+        metaFor = ("%s Rank of Gene Overall: %s ") % (gene, geneDiction[gene][2])
+        for fc in fcGroup:
+            genels = funClasses[fcGroup[m]][2]
+            # Get the rank in functional class for the gene in the main functional class int(funClasses[fcGene][2])
+            rank = int([i[1] for i in genels if i[0] == gene][0])
+            addMeta = " Rank in Functional Class %s: %s. " % (fc, funClasses[fc][2][1])
+            metaFor = metaFor + addMeta
+            m += 1
+    elif shape == "Ellipse":
+        metaFor = "%s Rank of Gene Overall: %s. Rank in Functional Class %s: %s"
+        metaFor = metaFor % (geneDiction[gene][1], geneDiction[gene][2], fcGroup[0], rank)
+    else:
+        metaFor = "Subgraph Description: %s. P value: %s. Number of Genes in Class: %s. "
+        metaFor = metaFor % (funClasses[fcGroup[0]][0][0], funClasses[fcGroup[0]][0][1], rank)
+        anchor = "Anchor gene description %s Rank of Gene Overall: %s. Rank in Functional Class %s: %s."
+        anchor = anchor % (geneDiction[gene][1], geneDiction[gene][2], fcGroup[0], rank)
+        metaFor = metaFor + anchor
+
+    return metaFor
 
 #   Creates the colour of the node based on the PC value of the Functional Class and rank in the class
 #   Input: name of the gene
@@ -157,7 +157,7 @@ def createJS():
         print ("Can't create file!")
         exit()
 
-def main(fcDiction, geDiction):
+def makeJSON(fcDiction, geDiction):
     # Variables to hold part of the json text
     top = '{\n\t"elements" : {\n'
     nodetop = '\t\t"nodes" : [\n'
