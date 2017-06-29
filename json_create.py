@@ -15,11 +15,13 @@ def nodeJSON(node, gene):
     shape = shapeNode(gene)
     colour = colorNode(gene)
     rankAll = geneDiction[gene][2]
-    meta = geneDiction[gene][1]
+    rankFC = funClasses[getFC(gene)][2][1]
+
+    meta = funClasses[getFC(gene)][2][2] + ": "+ geneDiction[gene][1]
 
     # node: id, name, description, shape, background colour, transparency, meta information
     #print ((node) % (idnum, name, description, shape, colour[0], colour[1], meta))
-    return ((node) % (idnum, name, description, shape, colour[0], colour[1], meta))
+    return ((node) % (idnum, name, description, shape, rankAll, rankFC, colour[0], colour[1], meta))
 
 #   Check of the gene is a anchor gene
 #   Input: name of the gene
@@ -151,7 +153,7 @@ def edgeJSON(text, link):
 #   Output: file object
 def createJS():
     try:
-        jsFile = open("eviNetwork01.cyjs", 'w')
+        jsFile = open("eviNetwork02.cyjs", 'w')
         return jsFile
     except:
         print ("Can't create file!")
