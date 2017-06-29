@@ -14,14 +14,17 @@ def nodeJSON(node, gene):
     description = geneDiction[gene][1]
     shape = shapeNode(gene)
     colour = colorNode(gene)
-    rankAll = geneDiction[gene][2]
-    rankFC = funClasses[getFC(gene)][2][1]
 
-    meta = funClasses[getFC(gene)][2][2] + ": "+ geneDiction[gene][1]
+    geneDetails = [gd for gd in funClasses[getFC(gene)[0]][2] if gene in gd][0]
+    print (geneDetails)
+    rankAll = geneDiction[gene][2]
+    rankFC = geneDetails[1]
+
+    meta = str(geneDetails[2]) + ": "+ geneDiction[gene][1]
 
     # node: id, name, description, shape, background colour, transparency, meta information
     #print ((node) % (idnum, name, description, shape, colour[0], colour[1], meta))
-    return ((node) % (idnum, name, description, shape, rankAll, rankFC, colour[0], colour[1], meta))
+    return ((node) % (idnum, name, description, rankAll, rankFC, shape, colour[0], colour[1], meta))
 
 #   Check of the gene is a anchor gene
 #   Input: name of the gene
