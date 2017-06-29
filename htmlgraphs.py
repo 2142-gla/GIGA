@@ -49,7 +49,7 @@ def main (funClasses, geneDiction):
 
     print (fc01.edges())
 
-    nx.draw(fc01, with_labels = True)
+    nx.draw(fc01, with_labels = True, node_size = 2000, node_shape = 'o')
 
     # http://networkx.readthedocs.io/en/networkx-1.11/reference/generated/networkx.drawing.nx_pylab.draw_networkx_labels.html#networkx.drawing.nx_pylab.draw_networkx_labels
     # G = nx.path_graph(4)
